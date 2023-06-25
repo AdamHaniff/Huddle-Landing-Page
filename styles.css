@@ -1,0 +1,271 @@
+:root {
+  /********** STYLE GUIDE *********/
+
+  /************ COLORS ************/
+  --violet: hsl(257, 40%, 49%);
+  --softMagenta: hsl(300, 69%, 71%);
+  --white: hsl(0, 0%, 100%);
+
+  /********** FONT FAMILY *********/
+  --poppins: "Poppins", sans-serif;
+  --openSans: "Open Sans", sans-serif;
+
+  /********* FONT WEIGHTS *********/
+  --fw400: 400;
+  --fw600: 600;
+}
+
+/************* GENERAL ************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  font-size: 62.5%;
+  background: var(--violet);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/***** INTRO SECTION CONTAINER ****/
+.intro-section-container {
+  margin: 3rem 0 4rem;
+  max-width: 55rem;
+}
+
+.huddle-logo,
+.illustration-img-container,
+.text-container,
+.footer-container {
+  position: relative;
+  z-index: 3;
+}
+
+/************* HEADER *************/
+.header-container {
+  margin: 0 0 6.3rem 4rem;
+}
+
+.huddle-logo {
+  display: block;
+  max-width: 12.3rem;
+  max-height: 3.25rem;
+}
+
+/******** BACKGROUND IMAGE ********/
+.header-container::after {
+  content: "";
+  display: block;
+  background-image: url("./images/bg-mobile.svg");
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/******* ILLUSTRATION IMAGE *******/
+.illustration-img-container {
+  margin: 0 3.9rem 6rem 4rem;
+}
+
+.illustration-img {
+  display: block;
+  max-width: 100%;
+}
+
+/********* TEXT CONTAINER *********/
+.text-container {
+  text-align: center;
+  margin: 0 3.5rem 6.4rem 3.6rem;
+  position: relative;
+  z-index: 3;
+}
+
+.header-text {
+  font-family: var(--poppins);
+  font-weight: var(--fw600);
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  color: var(--white);
+  margin-bottom: 1.6rem;
+}
+
+.paragraph-text {
+  font-family: var(--openSans);
+  font-weight: var(--fw400);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--white);
+  margin-bottom: 2.4rem;
+}
+
+.register-btn {
+  border: none;
+  background: var(--white);
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.269022);
+  border-radius: 2rem;
+  font-family: var(--poppins);
+  font-weight: var(--fw400);
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-align: center;
+  color: var(--violet);
+  padding: 1.1rem 7.5rem 1rem;
+  transition: all 0.3s;
+}
+
+/************* FOOTER *************/
+.footer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icon-container {
+  width: 2.75rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  border: 0.8px solid var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-icon {
+  font-size: 1.4rem;
+  color: var(--white);
+}
+
+.social-media-link {
+  text-decoration: none;
+}
+
+/********** HOVER STATES **********/
+.register-btn:is(:hover, :focus) {
+  cursor: pointer;
+  background: var(--softMagenta);
+  color: var(--white);
+}
+
+.icon-container:is(:hover, :focus) {
+  cursor: pointer;
+  border: 0.8px solid var(--softMagenta);
+}
+
+.icon-container:hover .social-media-icon {
+  color: var(--softMagenta);
+}
+
+/******* 1440px MEDIA QUERY *******/
+@media (min-width: 90em) {
+  /*** INTRO SECTION CONTAINER ***/
+  .intro-section-container {
+    margin: 6.4rem 8rem 4rem;
+    max-width: 144rem;
+  }
+
+  /************ HEADER ************/
+  .header-container {
+    margin: 0 0 7.5rem 0;
+  }
+
+  .huddle-logo {
+    max-width: 22rem;
+    max-height: 6.5rem;
+  }
+
+  /******* BACKGROUND IMAGE *******/
+  .header-container::after {
+    content: "";
+    display: block;
+    background-image: url("./images/bg-desktop.svg");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  /* ILLUSTRATION TEXT CONTAINER */
+  .illustration-text-container {
+    display: flex;
+    gap: 5.9rem;
+    margin-bottom: 2.7rem;
+  }
+
+  /****** ILLUSTRATION IMAGE ******/
+  .illustration-img-container {
+    margin: 0;
+  }
+
+  .illustration-img {
+    max-width: 69.6rem;
+    max-height: 49.3rem;
+  }
+
+  /********* TEXT CONTAINER *********/
+  .text-container {
+    text-align: initial;
+    margin: 0;
+    transform: translateY(3.2rem);
+  }
+
+  .header-text {
+    font-size: 4rem;
+    line-height: 6rem;
+    margin-bottom: 2.4rem;
+    max-width: 48.7rem;
+    max-height: 12rem;
+  }
+
+  .paragraph-text {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    max-width: 52rem;
+    max-height: 8.1rem;
+  }
+
+  .register-btn {
+    box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.258633);
+    border-radius: 2.8rem;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    padding: 1.3rem 6.3rem 1.6rem 6.4rem;
+  }
+
+  /************* FOOTER *************/
+  .footer-container {
+    justify-content: end;
+  }
+
+  .social-media-container {
+    gap: 1.6rem;
+  }
+
+  .icon-container {
+    width: 4rem;
+    height: 4rem;
+    border: 1.3px solid var(--white);
+  }
+
+  .social-media-icon {
+    font-size: 2rem;
+  }
+}
