@@ -113,7 +113,7 @@ main {
 .register-btn {
   border: none;
   background: var(--white);
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.269022);
+  box-shadow: 0.1rem 0.3rem 0.5rem rgba(0, 0, 0, 0.269022);
   border-radius: 2rem;
   font-family: var(--poppins);
   font-weight: var(--fw400);
@@ -140,7 +140,7 @@ main {
   width: 2.75rem;
   height: 2.8rem;
   border-radius: 50%;
-  border: 0.8px solid var(--white);
+  border: 0.08rem solid var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,7 +164,7 @@ main {
 
 .icon-container:is(:hover, :focus) {
   cursor: pointer;
-  border: 0.8px solid var(--softMagenta);
+  border: 0.08rem solid var(--softMagenta);
 }
 
 .icon-container:hover .social-media-icon {
@@ -243,7 +243,7 @@ main {
   }
 
   .register-btn {
-    box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.258633);
+    box-shadow: 0.2rem 0.4rem 0.9rem 0.3rem rgba(0, 0, 0, 0.258633);
     border-radius: 2.8rem;
     font-size: 1.8rem;
     line-height: 2.7rem;
@@ -262,7 +262,7 @@ main {
   .icon-container {
     width: 4rem;
     height: 4rem;
-    border: 1.3px solid var(--white);
+    border: 0.13rem solid var(--white);
   }
 
   .social-media-icon {
